@@ -1,0 +1,2 @@
+(()=>{"use strict";(0,window.reactR.reactShinyInput)(".superselect","jsdemo.superselect",(function(e){e.configuration;var t=e.value,n=e.setValue;return React.createElement("input",{type:"text",value:t,onChange:function(e){return n(e.target.value)}})}))})();
+//# sourceMappingURL=superselect.js.map

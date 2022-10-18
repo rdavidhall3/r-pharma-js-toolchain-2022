@@ -10,7 +10,13 @@ app_ui <- function(request) {
     golem_add_external_resources(),
     # Your application UI logic
     fluidPage(
-      h1("jsdemo")
+      h1("jsdemo"),
+      
+      # Superselect input
+      superselectInput("superselect"),
+      
+      # Output to display what was selected
+      textOutput("mirror")
     )
   )
 }

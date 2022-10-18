@@ -11,6 +11,8 @@ License: What license is it under?
 Imports: 
     config (>= 0.3.1),
     golem (>= 0.3.2),
+    htmltools,
+    reactR,
     shiny (>= 1.7.1)
 Encoding: UTF-8
 LazyData: true

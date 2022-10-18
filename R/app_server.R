@@ -6,4 +6,9 @@
 #' @noRd
 app_server <- function(input, output, session) {
   # Your application server logic
+  
+  # Mirror superselect output
+  output$mirror <- shiny::renderText({
+    input$superselect
+  })
 }
