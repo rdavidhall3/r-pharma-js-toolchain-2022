@@ -1,0 +1,31 @@
+{
+  "name": "srcreact",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "peerDependencies": {
+    "prop-types": "^15",
+    "react": "^16",
+    "react-dom": "^16"
+  },
+  "scripts": {
+    "start": "webpack-dev-server --mode development --open",
+    "build": "webpack --mode production",
+    "test": "jest",
+    "lint": "eslint --cache --format codeframe --ext mjs,jsx,js src test"
+  },
+  "devDependencies": {
+    "@neutrinojs/airbnb": "^9.5.0",
+    "@neutrinojs/jest": "^9.5.0",
+    "@neutrinojs/react-components": "^9.5.0",
+    "eslint": "^7",
+    "jest": "^26",
+    "neutrino": "^9.5.0",
+    "prop-types": "^15",
+    "react": "^16",
+    "react-dom": "^16",
+    "webpack": "^4",
+    "webpack-cli": "^3",
+    "webpack-dev-server": "^3"
+  }
+}
