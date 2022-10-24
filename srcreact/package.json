@@ -35,11 +35,16 @@
     "jest": "^26",
     "neutrino": "^9.5.0",
     "prop-types": "^15",
-    "react": "^16",
-    "react-dom": "^16",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "webpack": "^4",
     "webpack-cli": "^3",
     "webpack-dev-server": "^3"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "react-modal": "^3.16.1",
+    "recharts": "^2.1.15"
+  }
 }
