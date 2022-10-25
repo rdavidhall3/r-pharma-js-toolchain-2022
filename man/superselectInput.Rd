@@ -2,10 +2,18 @@
 % Please edit documentation in R/superselect.R
 \name{superselectInput}
 \alias{superselectInput}
-\title{<Add Title>}
+\title{Generate a SuperSelect input.}
 \usage{
-superselectInput(inputId, default = "")
+superselectInput(inputId, lab_param_tree = list())
+}
+\arguments{
+\item{inputId}{ID of the input.}
+
+\item{lab_param_tree}{A named list representing a 2-level tree of lab
+params.  The first level represents the lab category and maps to the
+SupserSelect group name.  The list values include properties required
+by the SuperSelect.}
 }
 \description{
-<Add Description>
+Generate a SuperSelect input.
 }

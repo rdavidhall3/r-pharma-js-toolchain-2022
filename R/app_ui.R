@@ -13,7 +13,7 @@ app_ui <- function(request) {
       h1("jsdemo"),
       
       # Superselect input
-      superselectInput("superselect"),
+      superselectInput("superselect", lab_param_tree = adlb_params),
       
       # Output to display what was selected
       textOutput("mirror")

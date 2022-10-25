@@ -3718,6 +3718,11 @@ array-includes@^3.0.3, array-includes@^3.1.4, array-includes@^3.1.5:
     get-intrinsic "^1.1.1"
     is-string "^1.0.7"
 
+array-object-transformer@^0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/array-object-transformer/-/array-object-transformer-0.0.3.tgz#6e42007069f76bf96b37db264acc6ae16b14cae7"
+  integrity sha512-OkyfCLhaVDz5ywD6QVmsc2oyMBs2L9IMlsx20hK4CQnwydiOSNXBSIc2y88d+j0OSdrJy1+GGrvEx1bwCfv2Bg==
+
 array-union@^1.0.1, array-union@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/array-union/-/array-union-1.0.2.tgz#9a34410e4f4e3da23dea375be5be70f24778ec39"
