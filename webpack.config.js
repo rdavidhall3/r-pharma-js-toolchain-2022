@@ -1,10 +1,13 @@
 var path = require('path');
 
 module.exports = {
-    entry: path.join(__dirname, 'srcjs', 'superselect.jsx'),
+    entry: {
+        'inst/www/jsdemo/superselect/superselect': path.join(__dirname, 'srcjs', 'superselect.jsx'),
+        'inst/htmlwidgets/mlchart': path.join(__dirname, 'srcjs', 'mlchart.jsx')
+    },
     output: {
-        path: path.join(__dirname, 'inst/www/jsdemo/superselect'),
-        filename: 'superselect.js'
+        path: path.join(__dirname, './'),
+        filename: '[name].js'
     },
     module: {
         rules: [

@@ -3,12 +3,17 @@
 #' <Add Description>
 #'
 #' @import htmlwidgets
+#' @importFrom dplyr distinct pull filter arrange
 #'
 #' @export
-mlchart <- function(message, width = NULL, height = NULL, elementId = NULL) {
+mlchart <- function(dat, width = NULL, height = NULL, elementId = NULL) {
 
   # describe a React component to send to the browser for rendering.
-  component <- reactR::reactMarkup(htmltools::tag("div", list(message)))
+  component <- reactR::reactMarkup(
+    reactR::component("MultiLabChart", list(
+      data = dat
+    ))
+  )
 
   # create widget
   htmlwidgets::createWidget(

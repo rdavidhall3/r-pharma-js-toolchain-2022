@@ -11,12 +11,8 @@ app_ui <- function(request) {
     # Your application UI logic
     fluidPage(
       h1("jsdemo"),
-      
-      # Superselect input
       superselectInput("superselect", lab_param_tree = adlb_params),
-      
-      # Output to display what was selected
-      textOutput("mirror")
+      mlchartOutput("chart")
     )
   )
 }
