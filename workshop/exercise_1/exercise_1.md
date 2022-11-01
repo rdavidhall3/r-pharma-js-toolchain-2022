@@ -102,9 +102,8 @@ You should see something like the following:
 &nbsp;  
 &nbsp;  
 
-## Step 3: Create React codebase.  NOTE; We are going to skip this during the workshop
-**Please skip to Step 4 for the workshop.  This step contains a lot of downtime.**
-** I am keeping the steps in the document for your later reference.**
+## Step 3: Create React codebase.  NOTE: We are going to skip this during the workshop
+**Please skip to Step 4 for the workshop.  This step contains a lot of downtime. I am keeping the steps in the document for your later reference.**
 
 0. OPTIONAL: If you did not complete the previous code sections, run the following commands
 in the **TERMINAL** to bring you codebase up to date:
@@ -969,14 +968,14 @@ Click on the **SelectItems** button.
 
 ## Step 8: Connect R and JavaScript code
 
-0. OPTIONAL: If you did not complete the previous code sections, run the following commands
-in the **TERMINAL** to bring you codebase up to date:
+1. Run the following commands in the **TERMINAL** to bring you codebase up to date
+and reveral test data:
 
 		git checkout -f step_8
 
-1. In **RStudio** open **./srcjs/superselect.jsx**.
+2. In **RStudio** open **./srcjs/superselect.jsx**.
 
-2. Replace the existing code in **superselect.jsx** with the following:
+3. Replace the existing code in **superselect.jsx** with the following:
 
 ```
 import { reactShinyInput } from 'reactR';
@@ -1006,7 +1005,7 @@ const input = ({ configuration, value, setValue }) => {
 reactShinyInput('.superselect', 'jsdemo.superselect', input);
 ```
 
-3. Open **./R/superselect.R** and replace the **superselectInput()** function code with:
+4. Open **./R/superselect.R** and replace the **superselectInput()** function code with:
 
 ```
 #' Generate a SuperSelect input.
@@ -1041,7 +1040,7 @@ superselectInput <- function(inputId, lab_param_tree = list()) {
 }
 ```
 
-4. Open **./R/app_ui.R** and replace the **app_ui()** function code with:
+5. Open **./R/app_ui.R** and replace the **app_ui()** function code with:
 
 ```
 app_ui <- function(request) {
@@ -1062,7 +1061,7 @@ app_ui <- function(request) {
 }
 ```
 
-5. TERMINAL: Enter the following command into the terminal:
+6. TERMINAL: Enter the following command into the terminal:
 
         yarn webpack
 
@@ -1070,12 +1069,12 @@ Notice that the files in the directory **./inst/www/jsdemo/superselect** have be
 All of the JavaScript code we wrote plus the necessary extract from third party packages
 have been packaged together.  Open the file **superselect.js** for fun!
 
-6. OPTIONAL: If you did not complete the previous code sections, run the following commands
+7. OPTIONAL: If you did not complete the previous code sections, run the following commands
 in the **TERMINAL** to bring you codebase up to date:
 
 		git checkout -f ex_1_final
 		
-7. Open the file **./dev/run_dev.R** and run all commands.  You should see the following
+8. Open the file **./dev/run_dev.R** and run all commands.  You should see the following
 when you click on the **jsdemo** button:
 
 ![](figs/fig18.png)
