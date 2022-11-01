@@ -51,9 +51,9 @@ Try resizing your browser and seeing how the charts adapt.
 
 ## Step 11: Connect React and R code
 
-1. Check out **step_11** branch from Git to reveal new code connecting React and R.
+1. Check out **ex_2_final** branch from Git to reveal new code connecting React and R.
 
-        git checkout -f step_11
+        git checkout -f ex_2_final
 
 2. In **RStudio**, note changes to the following files:
 
