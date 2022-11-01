@@ -2,23 +2,20 @@
 
 ## Step 1: Set up initial R project
 
-1. TERMINAL: Clone the workshop repo
 
-        git clone repo-url
-	
-2. TERMINAL: Check out the starting branch
+1. TERMINAL: Check out the starting branch
 
         git checkout step_1
 
-3. Open RStudio
+2. Open RStudio
 
-4. Create new project in the Git working dir
+3. Create new project in the Git working dir
 
-5. R CONSOLE: Create new {golem} web app
+4. R CONSOLE: Create new {golem} web app
 
         golem::create_golem(".", package_name = "jsdemo", overwrite = TRUE)
 	
-6. In RStudio, open ./dev/run_dev.R.  Run all commands and verify the Shiny app starts.  You
+5. In RStudio, open ./dev/run_dev.R.  Run all commands and verify the Shiny app starts.  You
 should see something like the following:
 
 ![](figs/fig1.png)
@@ -89,18 +86,14 @@ app_server <- function(input, output, session) {
   })
 }
 ```
-
-4. TERMINAL: Install webpack JavaScript package:
-
-        yarn add webpack
 		
 Note that this may take a few minutes to complete.
 
-5. TERMINAL: Execute the following command to package the JavaScript code:
+4. TERMINAL: Execute the following command to package the JavaScript code:
 
         yarn build
 
-6. R CONSOLE: Execute the commands in ./dev/run_dev.R and then enter text into
+5. R CONSOLE: Execute the commands in ./dev/run_dev.R and then enter text into
 the textbox (which is a placeholder for the JavaScript code we are going to write).
 You should see something like the following:
 
@@ -109,7 +102,14 @@ You should see something like the following:
 &nbsp;  
 &nbsp;  
 
-## Step 3: Create React codebase
+## Step 3: Create React codebase.  NOTE; We are going to skip this during the workshop
+**Please skip to Step 4 for the workshop.  This step contains a lot of downtime.**
+** I am keeping the steps in the document for your later reference.**
+
+0. OPTIONAL: If you did not complete the previous code sections, run the following commands
+in the **TERMINAL** to bring you codebase up to date:
+
+		git checkout -f step_3
 		
 1. TERMINAL: Initialize React codebase for component library development (as opposed to app development)
 using Neutrino
@@ -123,54 +123,47 @@ In the wizard select the following options using the arrow keys:
 - Would you like to add a test runner to your project? Select 'Jest'
 - Would you like to add linting to your project? Select 'Airbnb style rules'
 
-2. TERMINAL: Initialize Storybook
+2. Initialize Storybook.  In a new **TERMINAL** window, run:
 
         cd srcreact
         npx storybook init --type react
 		
-This may take a while.  After initialization completes, start Storybook by typing:
-
-        yarn storybook
-		
-Your browser should open to Storybook and you should see something like:
-
-![](figs/fig3.png)
-
-3. TERMINAL: Add some packages we will need later:
-		
-Testing-related packages
-
-        yarn add @testing-library/jest-dom @testing-library/react react-dom
-		
-Helper components
-
-        yarn add react-modal recharts array-object-transformer
-		
-Upgrade React:
-
-        yarn upgrade react --latest
+This may take a while.
 		
 &nbsp;  
 &nbsp;  
 
 
 ## Step 4: Create stub for initial React component
-		
-1. Open Visual Studio Code and open the React source code folder by selecting **File > Open Folder** from the menu.
 
-2. On the left navigation pane, open the **src** node and right click on the **components** node as shown in the following figure.
+0. Run the following commands in the **TERMINAL** to bring you codebase up to date:
+
+		git checkout -f step_4
+		
+1. Open Storybook by entering the following into a new **TERMINAL**:
+
+        cd srcreact
+		yarn storybook
+		
+Your browser should open to Storybook and you should see something like:
+
+![](figs/fig3.png)
+
+2. Open Visual Studio Code and open the React source code folder (srcreact) by selecting **File > Open Folder** from the menu.
+
+3. On the left navigation pane, open the **src** node and right click on the **components** node as shown in the following figure.
 
 ![](figs/fig4.png)
 
-3. Create a new folder named **SuperSelect**.  Afterwards, your source tree should look like the following figure:
+4. Create a new folder named **SuperSelect**.  Afterwards, your source tree should look like the following figure:
 
 ![](figs/fig5.png)
 
-4. Right click on the **SuperSelect** folder in the left navigation pane and create a new file named **CheckBoxGroup.jsx**.
+5. Right click on the **SuperSelect** folder in the left navigation pane and create a new file named **CheckBoxGroup.jsx**.
 
 ![](figs/fig6.png)
 
-5. Copy and past the following code into the file:
+6. Copy and past the following code into the file:
 
 ```
 import React from 'react'
@@ -182,11 +175,11 @@ const CheckBoxGroup = () => {
 export default CheckBoxGroup
 ```
 
-6. Right click on the **SuperSelect** folder in the left navigation pane and create a new file named **CheckBoxGroup.stories.jsx**.
+7. Right click on the **SuperSelect** folder in the left navigation pane and create a new file named **CheckBoxGroup.stories.jsx**.
 
 ![](figs/fig7.png)
 
-7. Copy and past the following code into the file:
+8. Copy and past the following code into the file:
 
 ```
 import React from 'react'
@@ -205,7 +198,7 @@ NoInitialSelections.args = {
 }
 ```
 
-8. Go to the Storybook tab in your browser.  Notice the new **CheckBoxGroup** node on the left.
+9. Go to the Storybook tab in your browser.  Notice the new **CheckBoxGroup** node on the left.
 Open it and click on the *No Initial Selections* item.  See the output of your new component in
 the main panel.
 
@@ -216,8 +209,13 @@ the main panel.
 
 ## Step 5: Complete initial React component
 
+0. OPTIONAL: If you did not complete the previous code sections, run the following commands
+in the **TERMINAL** to bring you codebase up to date:
+
+		git checkout -f step_5
+
 1. Add initial rendering and styling code to **CheckBoxGroup.jsx** by replacing the existing code with
-the following:
+the following.  This new code lays out and formats the checkboxes and labels.
 
 ```
 import React, {useState} from 'react'
@@ -324,7 +322,7 @@ NoInitialSelections.args = {
 
 ![](figs/fig9.png)
 
-4. Add statement management and event handling to **CheckBoxGroup.jsx** by replacing existing code with:
+4. Add state management and event handling to **CheckBoxGroup.jsx** by replacing existing code with:
 
 ```
 import React, {useState} from 'react'
@@ -538,6 +536,11 @@ event handler output.
 
 ## Step 6: Add unit tests
 
+0. OPTIONAL: If you did not complete the previous code sections, run the following commands
+in the **TERMINAL** to bring you codebase up to date:
+
+		git checkout -f step_6
+
 1. In **VS Code**, create directories for unit testing:
 
 - Right click on the **test** node in the left navigation pane.
@@ -713,7 +716,7 @@ describe("<CheckBoxGroup />", () => {
 
 1. Check out Git branch to add test data:
 
-        git checkout step_7
+        git checkout -f step_7
 
 2. In the left navigation pane, right click on the **src/components/SuperSelect** node and create
 a new file named **CheckBoxGroups.jsx**.
@@ -966,6 +969,11 @@ Click on the **SelectItems** button.
 
 ## Step 8: Connect R and JavaScript code
 
+0. OPTIONAL: If you did not complete the previous code sections, run the following commands
+in the **TERMINAL** to bring you codebase up to date:
+
+		git checkout -f step_8
+
 1. In **RStudio** open **./srcjs/superselect.jsx**.
 
 2. Replace the existing code in **superselect.jsx** with the following:
@@ -1061,8 +1069,13 @@ app_ui <- function(request) {
 Notice that the files in the directory **./inst/www/jsdemo/superselect** have been updated.
 All of the JavaScript code we wrote plus the necessary extract from third party packages
 have been packaged together.  Open the file **superselect.js** for fun!
+
+6. OPTIONAL: If you did not complete the previous code sections, run the following commands
+in the **TERMINAL** to bring you codebase up to date:
+
+		git checkout -f ex_1_final
 		
-6. Open the file **./dev/run_dev.R** and run all commands.  You should see the following
+7. Open the file **./dev/run_dev.R** and run all commands.  You should see the following
 when you click on the **jsdemo** button:
 
 ![](figs/fig18.png)

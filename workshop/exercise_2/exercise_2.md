@@ -18,9 +18,9 @@ Note several new files:
 
 ## Step 10: Implement React code
 
-1. Check out **step_10** branch from Git to reveal React code:
+1. In the **TERMINAL** check out **step_10** branch from Git to reveal React code:
 
-        git checkout step_10
+        git checkout -f step_10
 		
 2. Open **VS Code** and note there is a new component directory
 in the left navigation pane: **src/components/MultiLabChart**.
@@ -52,6 +52,8 @@ Try resizing your browser and seeing how the charts adapt.
 ## Step 11: Connect React and R code
 
 1. Check out **step_11** branch from Git to reveal new code connecting React and R.
+
+        git checkout -f step_11
 
 2. In **RStudio**, note changes to the following files:
 
