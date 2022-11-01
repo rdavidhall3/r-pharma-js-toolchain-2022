@@ -25,11 +25,16 @@ should see something like the following:
 
 ## Step 2: Create R stub for SuperSelect component
 
+0. OPTIONAL: If you did not complete the previous code sections, run the following commands
+in the **TERMINAL** to bring you codebase up to date:
+
+		git checkout -f step_2
+
 1. R CONSOLE: Generate {reactR} stub:
 
         reactR::scaffoldReactShinyInput("superselect")
 		
-Notice that three files are created:
+Notice that four files are created:
 
 - ./R/superselect.R : Functions similiar to Shiny inputs
 - ./srcjs/superselect.jsx : Entrypoint to JavaScript
@@ -969,7 +974,7 @@ Click on the **SelectItems** button.
 ## Step 8: Connect R and JavaScript code
 
 1. Run the following commands in the **TERMINAL** to bring you codebase up to date
-and reveral test data:
+and reveal test data:
 
 		git checkout -f step_8
 

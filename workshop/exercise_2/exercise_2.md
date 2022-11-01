@@ -2,6 +2,11 @@
 
 ## Step 9: Create HTMLWidget stub code
 
+0. OPTIONAL: If you did not complete the previous code sections, run the following commands
+in the **TERMINAL** to bring you codebase up to date:
+
+		git checkout -f step_9
+
 1. Open **RStudio**
 
 2. CONSOLE: In the R console, enter the following command:
