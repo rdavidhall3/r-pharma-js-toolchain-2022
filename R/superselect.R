@@ -1,12 +1,16 @@
-#' <Add Title>
+#' Generate a SuperSelect input.
 #'
-#' <Add Description>
+#' @param inputId ID of the input.
+#' @param lab_param_tree A named list representing a 2-level tree of lab
+#' params.  The first level represents the lab category and maps to the
+#' SupserSelect group name.  The list values include properties required
+#' by the SuperSelect.
 #'
 #' @importFrom reactR createReactShinyInput
 #' @importFrom htmltools htmlDependency tags
 #'
 #' @export
-superselectInput <- function(inputId, default = "") {
+superselectInput <- function(inputId, lab_param_tree = list()) {
   reactR::createReactShinyInput(
     inputId,
     "superselect",
@@ -17,8 +21,10 @@ superselectInput <- function(inputId, default = "") {
       package = "jsdemo",
       script = "superselect.js"
     ),
-    default,
     list(),
+    list(
+      elements = lab_param_tree
+    ),
     htmltools::tags$span
   )
 }
